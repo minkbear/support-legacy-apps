@@ -1,0 +1,20 @@
+{
+    "name": "minkbear/support-legacy-apps",
+    "description": "Support Legacy Application (running PHP <= 5.3)",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "minkbear",
+            "email": "minkbear@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "autoload": {
+        "files": ["src/fix_register_globals.php", "src/fix_mysql.inc.php"],
+        "psr-4": {
+            "Minkbear\\": "src"
+        }
+    }
+}
