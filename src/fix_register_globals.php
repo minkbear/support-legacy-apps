@@ -1,7 +1,7 @@
 <?php
 
 if (!function_exists('register_globals')) {
-    function register_globals($order = 'egpcs')
+    function register_globals($order = 'egpcns')
     {
         // define a subroutine
         if (!function_exists('register_global_array')) {
@@ -30,6 +30,9 @@ if (!function_exists('register_globals')) {
                     break;
                 case 'c':
                     register_global_array($_COOKIE);
+                    break;
+                case 'n':
+                    register_global_array($_SESSION);
                     break;
                 case 's':
                     register_global_array($_SERVER);
